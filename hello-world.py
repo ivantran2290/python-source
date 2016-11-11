@@ -1,5 +1,5 @@
 
-import common
+from utils import common
 
 def print_hello_world():
     """
@@ -88,7 +88,7 @@ def lists():
     print(strings)
     print("The second name on the names list is %s" % second_name)
 
-def arithmetic_operators():
+def basic_operators():
     """
     Return some value for testing arithmetic operators in python
     """
@@ -143,4 +143,4 @@ print_hello_world()
 indentation()
 variables_and_type()
 lists()
-arithmetic_operators()
+basic_operators()
