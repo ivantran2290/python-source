@@ -122,12 +122,11 @@ def arithmetic_operators():
     # cap so nhan mang hien tai
     print([1, 2, 3] * 3)
 
-    x = object()
-    y = object()
+    x_obj = object()
+    y_obj = object()
 
-    # TODO: change this code
-    x_list = [x, x, x, x, x, x, x, x, x, x]
-    y_list = [y, y, y, y, y, y, y, y, y, y]
+    x_list = [x_obj, x_obj, x_obj, x_obj, y_obj, x_obj, x_obj, x_obj, x_obj, x_obj]
+    y_list = [y_obj, y_obj, y_obj, y_obj, x_obj, y_obj, y_obj, y_obj, y_obj, y_obj]
     big_list = x_list + y_list
 
     print("x_list contains %d objects" % len(x_list))
@@ -135,9 +134,9 @@ def arithmetic_operators():
     print("big_list contains %d objects" % len(big_list))
 
     # testing code
-    if x_list.count(x) == 10 and y_list.count(y) == 10:
+    if x_list.count(x_obj) == 10 and y_list.count(y_obj) == 10:
         print("Almost there...")
-    if big_list.count(x) == 10 and big_list.count(y) == 10:
+    if big_list.count(x_obj) == 10 and big_list.count(y_obj) == 10:
         print("Great!")
 
 print_hello_world()
