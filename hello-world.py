@@ -1,11 +1,29 @@
 
 from utils import common
 
+def main():
+    """
+    This is main function place call other functions
+    """
+    print_hello_world()
+    indentation()
+    variables_and_type()
+    lists()
+    basic_operators()
+    string_formatting()
+
+def print_end_scope():
+    """
+    Return hyphen list string to separate different scope
+    """
+    print("---------------------------------")
+
 def print_hello_world():
     """
     Return hello world string
     """
     print("hello wolrd!!!")
+    print_end_scope()
 
 def indentation():
     """
@@ -14,6 +32,7 @@ def indentation():
     var = 1
     if var == 1:
         print("var is 1")
+    print_end_scope()
 
 def variables_and_type():
     """
@@ -55,6 +74,7 @@ def variables_and_type():
         print("Float: %d" % myfloat)
     if isinstance(myint, int) and myint == 20:
         print("Integer: %d" % myint)
+    print_end_scope()
 
 def lists():
     """
@@ -87,6 +107,7 @@ def lists():
     print(numbers)
     print(strings)
     print("The second name on the names list is %s" % second_name)
+    print_end_scope()
 
 def basic_operators():
     """
@@ -138,9 +159,32 @@ def basic_operators():
         print("Almost there...")
     if big_list.count(x_obj) == 10 and big_list.count(y_obj) == 10:
         print("Great!")
+    print_end_scope()
 
-print_hello_world()
-indentation()
-variables_and_type()
-lists()
-basic_operators()
+def string_formatting():
+    """
+    Python uses C-style string formatting to create new, formatted strings.
+    The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list),
+    together with a format string, which contains normal text together with "argument specifiers",
+    special symbols like "%s" and "%d".
+    """
+    # This prints out "Hello, John!"
+    name = "John"
+    print("Hello, %s!" % name)
+
+    # This prints out "John is 23 years old."
+    name = "Doe John"
+    age = 26
+    print("%s is %d years old." % (name, age))
+
+    # This prints out: A list: [1, 2, 3]
+    mylist = [1, 2, 3]
+    print("A list: %s" % mylist)
+
+    # Exercise
+    data = ("John", "Doe", 53.44)
+    format_string = "Hello %s %s. Your current balance is %.2f$"
+
+    print(format_string % data)
+
+main()
